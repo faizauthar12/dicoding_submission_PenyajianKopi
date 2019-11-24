@@ -17,10 +17,12 @@ public class ServingData {
             "Penyajian 4"
     };
 
-    /*private static int[] servingImages = {
-            R.drawable.penyajian1,
-
-    }*/
+    private static int[] servingImages = {
+            R.drawable.download,
+            R.drawable.download,
+            R.drawable.download,
+            R.drawable.download
+    };
 
     static ArrayList<Serving> getListData() {
         ArrayList<Serving> list = new ArrayList<>();
@@ -28,7 +30,8 @@ public class ServingData {
             Serving serving = new Serving();
             serving.setName(servingNames[position]);
             serving.setDetail(servingDetails[position]);
-            /*serving.setImg(servingImages[position]);*/
+            serving.setImg(servingImages[position]);
+            list.add(serving);
         }
         return list;
     }

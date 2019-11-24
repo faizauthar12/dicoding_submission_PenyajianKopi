@@ -2,6 +2,7 @@ package io.faizauthar12.github.penyajiankopi;
 
 public class Serving {
     private String name, detail;
+    private int img;
 
     public String getName() {
         return name;
@@ -26,6 +27,4 @@ public class Serving {
     public void setImg(int img) {
         this.img = img;
     }
-
-    private int img;
 }
