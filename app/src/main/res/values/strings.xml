@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Penyajian Kopi</string>
+    <string name="serving_name">Namanya</string>
+    <string name="serving_detail">details</string>
+</resources>
