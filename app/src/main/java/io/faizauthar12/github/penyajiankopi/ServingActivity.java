@@ -8,14 +8,14 @@ import android.os.Bundle;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class ServingActivity extends AppCompatActivity {
     private RecyclerView rvServing;
     private ArrayList<Serving> list = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_serving);
 
         rvServing = findViewById(R.id.rv_serving);
         rvServing.setHasFixedSize(true);
