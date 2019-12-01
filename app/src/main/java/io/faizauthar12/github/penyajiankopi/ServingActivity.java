@@ -8,6 +8,10 @@ import android.os.Bundle;
 
 import java.util.ArrayList;
 
+import io.faizauthar12.github.penyajiankopi.adapters.ListServingAdapter;
+import io.faizauthar12.github.penyajiankopi.data.ServingData;
+import io.faizauthar12.github.penyajiankopi.models.Serving;
+
 public class ServingActivity extends AppCompatActivity {
     private RecyclerView rvServing;
     private ArrayList<Serving> list = new ArrayList<>();

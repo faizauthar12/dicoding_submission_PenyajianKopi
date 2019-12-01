@@ -1,4 +1,4 @@
-package io.faizauthar12.github.penyajiankopi;
+package io.faizauthar12.github.penyajiankopi.models;
 
 public class Serving {
     private String name, detail;

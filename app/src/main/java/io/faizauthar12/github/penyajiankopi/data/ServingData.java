@@ -1,6 +1,9 @@
-package io.faizauthar12.github.penyajiankopi;
+package io.faizauthar12.github.penyajiankopi.data;
 
 import java.util.ArrayList;
+
+import io.faizauthar12.github.penyajiankopi.R;
+import io.faizauthar12.github.penyajiankopi.models.Serving;
 
 public class ServingData {
     private static String[] servingNames = {
@@ -24,7 +27,7 @@ public class ServingData {
             R.drawable.download
     };
 
-    static ArrayList<Serving> getListData() {
+    public static ArrayList<Serving> getListData() {
         ArrayList<Serving> list = new ArrayList<>();
         for (int position = 0; position < servingNames.length; position++) {
             Serving serving = new Serving();

@@ -1,10 +1,9 @@
-package io.faizauthar12.github.penyajiankopi;
+package io.faizauthar12.github.penyajiankopi.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,6 +13,9 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 
 import java.util.ArrayList;
+
+import io.faizauthar12.github.penyajiankopi.R;
+import io.faizauthar12.github.penyajiankopi.models.Serving;
 
 public class ListServingAdapter extends RecyclerView.Adapter<ListServingAdapter.ListViewHolder> {
     private ArrayList<Serving> listServing;
