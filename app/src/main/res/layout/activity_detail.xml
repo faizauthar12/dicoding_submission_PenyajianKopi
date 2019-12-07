@@ -17,7 +17,7 @@
             android:padding="30dp">
 
             <ImageView
-                android:id="@+id/img_serving"
+                android:id="@+id/serving_img"
                 android:layout_width="174dp"
                 android:layout_height="174dp"
                 android:adjustViewBounds="true"

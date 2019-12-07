@@ -43,7 +43,7 @@ public class ListServingAdapter extends RecyclerView.Adapter<ListServingAdapter.
         Glide.with(holder.itemView.getContext())
                 .load(serving.getImg())
                 .apply(new RequestOptions().override(55, 55))
-                .into(holder.imgServing);
+                .into(holder.servingImg);
         holder.servingName.setText(serving.getName());
         holder.servingDetail.setText(serving.getDetail());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -60,12 +60,12 @@ public class ListServingAdapter extends RecyclerView.Adapter<ListServingAdapter.
     }
 
     public class ListViewHolder extends RecyclerView.ViewHolder {
-        ImageView imgServing;
+        ImageView servingImg;
         TextView servingName, servingDetail;
 
         public ListViewHolder(@NonNull View itemView) {
             super(itemView);
-            imgServing = itemView.findViewById(R.id.img_serving);
+            servingImg = itemView.findViewById(R.id.serving_img);
             servingName = itemView.findViewById(R.id.serving_name);
             servingDetail = itemView.findViewById(R.id.serving_detail);
         }

@@ -9,8 +9,6 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-import org.w3c.dom.Text;
-
 import io.faizauthar12.github.penyajiankopi.models.Serving;
 
 public class DetailActivity extends AppCompatActivity {
@@ -22,7 +20,7 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        ImageView imgServing = findViewById(R.id.img_serving);
+        ImageView servingImg = findViewById(R.id.serving_img);
 
         TextView servingName = findViewById(R.id.serving_name);
         TextView servingDetails = findViewById(R.id.serving_detail);
@@ -36,8 +34,8 @@ public class DetailActivity extends AppCompatActivity {
         if (serving != null) {
             Glide.with(this)
                     .load(serving.getImg())
-                    .into(imgServing);
-            imgServing.setContentDescription(serving.getName());
+                    .into(servingImg);
+            servingImg.setContentDescription(serving.getName());
             servingName.setText(serving.getName());
             CoffeePercentBar.setProgress(serving.getCofee());
             MilkPercentBar.setProgress(serving.getMilk());
