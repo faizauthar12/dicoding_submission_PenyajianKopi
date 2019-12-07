@@ -5,7 +5,7 @@ import android.os.Parcelable;
 
 public class Serving implements Parcelable {
     private String name, detail;
-    private int img;
+    private int cofee, img, milk, water;
 
     public Serving() {
 
@@ -34,6 +34,31 @@ public class Serving implements Parcelable {
     public void setImg(int img) {
         this.img = img;
     }
+
+    public int getCofee() {
+        return cofee;
+    }
+
+    public void setCofee(int cofee) {
+        this.cofee = cofee;
+    }
+
+    public int getMilk() {
+        return milk;
+    }
+
+    public void setMilk(int milk) {
+        this.milk = milk;
+    }
+
+    public int getWater() {
+        return water;
+    }
+
+    public void setWater(int water) {
+        this.water = water;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -44,12 +69,18 @@ public class Serving implements Parcelable {
         parcel.writeString(name);
         parcel.writeString(detail);
         parcel.writeInt(img);
+        parcel.writeInt(cofee);
+        parcel.writeInt(milk);
+        parcel.writeInt(water);
     }
 
     protected Serving(Parcel in) {
         name = in.readString();
         detail = in.readString();
         img = in.readInt();
+        cofee = in.readInt();
+        milk = in.readInt();
+        water = in.readInt();
     }
 
     public static final Creator<Serving> CREATOR = new Creator<Serving>() {
