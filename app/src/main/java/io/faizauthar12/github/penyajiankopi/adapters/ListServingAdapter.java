@@ -18,10 +18,15 @@ import io.faizauthar12.github.penyajiankopi.R;
 import io.faizauthar12.github.penyajiankopi.models.Serving;
 
 public class ListServingAdapter extends RecyclerView.Adapter<ListServingAdapter.ListViewHolder> {
-    private ArrayList<Serving> listServing;
+    private final ArrayList<Serving> listServing;
+    private OnServingListener onServingListener;
 
     public ListServingAdapter(ArrayList<Serving> list) {
         this.listServing = list;
+    }
+
+    public void setOnServingListener(OnServingListener onServingListener) {
+        this.onServingListener = onServingListener;
     }
 
     @NonNull
@@ -34,14 +39,19 @@ public class ListServingAdapter extends RecyclerView.Adapter<ListServingAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ListViewHolder holder, int position) {
-        Serving serving = listServing.get(position);
+        final Serving serving = listServing.get(position);
         Glide.with(holder.itemView.getContext())
                 .load(serving.getImg())
                 .apply(new RequestOptions().override(55, 55))
                 .into(holder.imgServing);
         holder.servingName.setText(serving.getName());
         holder.servingDetail.setText(serving.getDetail());
-
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onServingListener.onServingClick(serving);
+            }
+        });
     }
 
     @Override
@@ -59,5 +69,9 @@ public class ListServingAdapter extends RecyclerView.Adapter<ListServingAdapter.
             servingName = itemView.findViewById(R.id.serving_name);
             servingDetail = itemView.findViewById(R.id.serving_detail);
         }
+    }
+
+    public interface OnServingListener {
+        void onServingClick(Serving serving);
     }
 }

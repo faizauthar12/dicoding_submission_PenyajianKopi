@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import java.util.ArrayList;
@@ -32,5 +33,14 @@ public class ServingActivity extends AppCompatActivity {
         rvServing.setLayoutManager(new LinearLayoutManager(this));
         ListServingAdapter listServingAdapter = new ListServingAdapter(list);
         rvServing.setAdapter((listServingAdapter));
+
+        listServingAdapter.setOnServingListener(new ListServingAdapter.OnServingListener() {
+            @Override
+            public void onServingClick(Serving serving) {
+                Intent intent = new Intent(ServingActivity.this, DetailActivity.class);
+                intent.putExtra(DetailActivity.ITEM_EXTRA, serving);
+                startActivity(intent);
+            }
+        });
     }
 }
