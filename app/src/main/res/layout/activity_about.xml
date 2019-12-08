@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AboutActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/AuthorPic"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:padding="30dp"
+        android:src="@drawable/authorpic"/>
+
+    <TextView
+        android:id="@+id/AuthorFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="10dp"
+        android:text="Muhammad Alfaiz Khisma Authar"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="2dp"
+        android:text="faizauthar12"
+        android:textStyle="italic" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <TextView
+                android:id="@+id/SourceCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:drawableLeft="@drawable/ic_github_logo"
+                android:drawablePadding="5dp"
+                android:text="Source Code"/>
+
+            <TextView
+                android:id="@+id/GithubProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:drawableLeft="@drawable/ic_github_logo"
+                android:drawablePadding="5dp"
+                android:text="Github Profile" />
+
+            <TextView
+                android:id="@+id/TelegramProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/ic_telegram"
+                android:drawablePadding="5dp"
+                android:padding="5dp"
+                android:text="Telegram Profile" />
+
+            <TextView
+                android:id="@+id/Linkedin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/ic_linkedin"
+                android:drawablePadding="5dp"
+                android:padding="5dp"
+                android:text="Linkedin Profile" />
+
+            <TextView
+                android:id="@+id/Reference1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/ic_github_logo"
+                android:drawablePadding="5dp"
+                android:padding="5dp"
+                android:text="Reference 1" />
+
+            <TextView
+                android:id="@+id/Reference2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/ic_youtube"
+                android:drawablePadding="5dp"
+                android:padding="5dp"
+                android:text="Reference 2" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

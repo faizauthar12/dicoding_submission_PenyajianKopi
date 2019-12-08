@@ -6,4 +6,5 @@
     <string name="waterpercent">Water</string>
     <string name="milkpercent">Milk</string>
     <string name="serving_labelDetail">Penjelasan</string>
+    <string name="about">About</string>
 </resources>
